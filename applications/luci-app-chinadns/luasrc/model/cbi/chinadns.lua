@@ -21,9 +21,14 @@ o = s:option(Flag, "bidirectional",
 	translate("Also filter results inside China from foreign DNS servers"))
 o.rmempty = false
 
+o = s:option(Flag, "apnt_en",
+	translate("Enable DNS compression pointer"),
+	translate("use DNS compression pointer mutation."))
+o.rmempty = false
+
 o = s:option(Value, "port", translate("Local Port"))
-o.placeholder = 5353
-o.default = 5353
+o.placeholder = 1053
+o.default = 1053
 o.datatype = "port"
 o.rmempty = false
 
